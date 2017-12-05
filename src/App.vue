@@ -18,7 +18,7 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
-    <fb-intro :active="active" :stepsList="list" @intro-end="active = false"></fb-intro>
+    <fb-intro :active="active" :steps-list="list" @intro-end="active = false"></fb-intro>
     <button class="go-btn" @click="active = !active">Go!</button>
   </div>
 </template>
