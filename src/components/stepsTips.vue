@@ -84,9 +84,15 @@ export default {
       let tipsStyle = {
         position: 'absolute',
         width: location.width,
-        left: location.width > 200 ? 0 : -((200 - location.width) / 2)
       };
+      // 检测块上部分位置多还是下部分位置多
       distanceTop > distanceBottom ? tipsStyle.top = '-100%' : tipsStyle.top = '100%';
+      // 检测是否左贴边
+      if (location.width < 200) {
+        if (location.left < 50) tipsStyle.left = 0
+        else if ((this.clientWidth - (location.x + location.width)) < 50) tipsStyle.right = 0
+        else tipsStyle.left = -((200 - location.width) / 2)
+      }
       Velocity(document.getElementById('tipsDesc'), tipsStyle, {
         duration: 150
       })
