@@ -8,7 +8,7 @@ This plugin was uesd in my company project, I will update the advanced features 
 
 ## README LANGUAGE
 
-[中文文档](https://github.com/JefferyLiang/vue-introduction/doc/README.zh.md)
+[中文文档](https://github.com/JefferyLiang/vue-introduction/blob/master/doc/README.zh.md)
 
 ## Demo
 
