@@ -19,7 +19,8 @@ export default {
       default: () => []
     },
     'active': {
-      type: Boolean
+      type: Boolean,
+      required: true
     }
   },
   data() {

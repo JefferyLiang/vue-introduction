@@ -6,6 +6,10 @@ This is the simple vue introduction plugins in vue.js
 
 This plugin was uesd in my company project, I will update the advanced features soon.
 
+## README LANGUAGE
+
+[中文文档](https://github.com/JefferyLiang/vue-introduction/doc/README.zh.md)
+
 ## Demo
 
 the live [demo](https://jsfiddle.net/JefferyLiang/39soL0ar/)
@@ -57,4 +61,4 @@ use in `.vue` file
 | Parameter | Description | type | optional value | default value |
 | --- | --- | --- | --- | --- |
 | active | begin the vue-introduction or not | Boolean | true/false | - |
-| steps-list | the introduction steps list, className item is the dom class name, content item is the introduction description | Array | [] |
+| steps-list | the introduction steps list<br> `className` item is the dom class name<br>.<br> `content` item is the introduction description. | Array | Array<Object> | [] |
