@@ -33,15 +33,17 @@ Vue.use(VueIntroduction)
 
 use in `.vue` file
 
-```
-<div>
-  <div class="logo-container">
+```vue
+<template>
+  <div>
+    <div class="logo-container">
+      ...
+    </div>
+    ...
+    <fb-intro :active="active" :steps-list="list" @intro-end="active = false"></fb-intro>
     ...
   </div>
-  ...
-  <fb-intro :active="active" :steps-list="list" @intro-end="active = false"></fb-intro>
-  ...
-</div>
+</template>
 
 <script>
   export default{
