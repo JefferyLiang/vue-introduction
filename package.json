@@ -1,7 +1,7 @@
 {
   "name": "vue-introduction",
   "description": "a vue.js introduction plugins",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/vue-introduction.js",
   "author": "JefferyLiang",
   "license": "MIT",
