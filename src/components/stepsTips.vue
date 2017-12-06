@@ -84,13 +84,14 @@ export default {
       let tipsStyle = {
         position: 'absolute',
         width: location.width,
+        left: 0
       };
       // 检测块上部分位置多还是下部分位置多
       distanceTop > distanceBottom ? tipsStyle.top = '-100%' : tipsStyle.top = '100%';
       // 检测是否左贴边
       if (location.width < 200) {
         if (location.left < 50) tipsStyle.left = 0
-        else if ((this.clientWidth - (location.x + location.width)) < 50) tipsStyle.right = 0
+        else if ((this.clientWidth - (location.x + location.width)) < 50) tipsStyle.left = -(200 - location.width)
         else tipsStyle.left = -((200 - location.width) / 2)
       }
       Velocity(document.getElementById('tipsDesc'), tipsStyle, {
@@ -100,6 +101,7 @@ export default {
     nextPart() {
       if (this.lock) return;
       if (this.step === -1) this.step++
+      if (this.step === 0) this.$emit('intro-begin')
       if (this.stepsList[this.step]) this.setPosition();
       if (this.step === this.stepsList.length) {
         this.$emit('intro-end');
@@ -107,6 +109,7 @@ export default {
         return
       }
       this.step++;
+      this.$emit('intro-next', this.step - 1)
     }
   }
 }
